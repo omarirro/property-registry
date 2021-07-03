@@ -1,0 +1,21 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Contract #1</h4>
+                        <p class="category">{{ptype}}</p>
+                    </div>
+                    <div class="content">
+                        <h5 *ngIf="contState != null && contState == 0">(Seller) -> <button class="btn btn-info btn-fill">Sign Contract</button></h5>
+                        <h5 *ngIf="contState == 1" class="btn btn-info btn-fill">(Buyer) -> <button>Sign Contract - Pay Deposit</button></h5>
+                        <h5 *ngIf="contState == 2">(Realtor) -> <button class="btn btn-info btn-fill">Approve</button>
+                            <button class="btn btn-danger btn-fill">Decline</button></h5>
+                        <h5 *ngIf="contState == 3">(Buyer) -> <button class="btn btn-fill">Finalize Contract</button></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
